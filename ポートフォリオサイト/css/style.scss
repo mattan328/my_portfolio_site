@@ -1,0 +1,250 @@
+@mixin contents-title{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-family: 'Book Antiqua';
+    font-size: 35px;
+}
+
+header{
+    height: 120px;
+    .header_title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        h1{
+            font-family: 'Haettenschweiler';
+            margin-left: 2%;
+            font-size: 2.4rem;
+        }
+        .header_title-icon{
+            width: 30%;
+            i{
+                font-family: 'Font Awesome 5 Brands';
+                width: 30%;
+                text-align: center;
+                font-size: 1.4rem;
+                padding-top: 40px;
+            }
+        }
+    }
+    .header_nav{
+        width: 45%;
+        margin-left: 50%;
+        margin-top: -20px;
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            li{
+                list-style: none;
+                font-size: 0.9rem;
+                padding-right: 8px;
+            }
+        }
+    }
+}
+main{
+    .main_main-contents-img{
+        width: 70%;
+        margin: 0 auto;
+        img{
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+    }
+    .main_contents-wrapper3{
+        .main_contemts-img-wrapper{
+            width: 90%;
+            margin: 0 auto;
+            img{
+                width: 19%;
+                
+            }
+        }
+    }
+    .main_contents-wrapper2{
+        .main_contemts-works-wrapper{
+            margin: 0 auto;
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .programming-works{
+                width: 33%;
+                text-align: center;
+                h3{
+                    background-color: lightgreen;
+                }
+                img{
+                    width: 50%;
+                }
+            }
+            .running-club-works{
+                width: 33%;
+                text-align: center;
+                h3{
+                    background-color: lightskyblue;
+                }
+                img{
+                    width: 50%;
+                }
+            }
+            .youtube-works{
+                width: 33%;
+                text-align: center;
+                h3{
+                    background-color: palevioletred;
+                }
+                img{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+footer{
+    height: 120px;
+    margin-top: 80px;
+    .footer_title{
+        width: 90%;
+        margin: 0 auto;
+        border-top: 1px solid #000;
+        p{
+            font-size: 20px;
+        }
+        .header_title-icon{
+            a{
+                text-decoration: none;
+            }
+            i{
+                font-family: 'Font Awesome 5 Brands';
+                text-align: center;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+body{
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.main_contents-title{
+    width: 60%;
+    margin: 0 auto;
+    h2{
+        @include contents-title;
+    }
+}
+.contact{
+    width: 80%;
+    margin: 0 auto;
+    h1{
+        text-align: center;
+        font-size: 4.375rem;
+        font-family: 'Sofia', cursive;
+    }
+    p{
+        text-align: center;
+    }
+    .contact-value{
+        width: 20%;
+        margin: 0 auto;
+        input{
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:680px){
+    .main_contents-wrapper1{
+        width: 80%;
+        margin: 0 auto;
+        .main_contents-text{
+            display: flex;
+            flex-direction: row;
+            .main_contents-text-img{
+                width: 50%;
+                img{
+                    width: 150px;
+                    border-radius: 300px;
+                }
+            }
+            .main_contemts-text-list{
+                width: 70%;
+                h3{
+                    padding-left: 10%;
+                }
+                ul{
+                    margin-left: -50px;
+                    text-align: left;
+                    li{
+                        list-style: none;
+                        padding-left: 10%;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:680px){
+    .main_contents-wrapper1{
+        .main_contents-text{
+            .main_contents-text-img{
+                img{
+                    display: none;
+                }
+            }
+            .main_contemts-text-list{
+                width: 60%;
+                margin: 0 auto;
+                h3{
+                    background-color: lightskyblue;
+                    font-size: 30px;
+                }
+                ul{
+                    li{
+                        list-style: none;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:1000px){
+    .contact-wrapper{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        .contact-personal-wrapper{
+            margin-right: 5%;
+        }
+    }
+}
+
+@media(max-width:1000px){
+    .contact-wrapper{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        .contact-personal-wrapper{
+            margin: 0 auto;
+        }
+        .contact-comment{
+            margin-right: 10%;
+            textarea{
+                width: 230px;
+            }
+        }
+    }
+}
